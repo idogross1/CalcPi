@@ -1,2 +1,6 @@
 # CalcPi
-Calculate the value of Pi using multithreading.
+This project I did for a course in software engineering. The assignment was to claculate the value of Pi using multithreading.
+The idea is based on the fact that the area of a circle of radius 1 is equal to π, and the area of a quarter of that circle is π/4. http://www.cs.ukzn.ac.za/~hughm/oop/docs/eckNotes/c12/estimate_pi_figure.png.
+The area of the whole square is one, while the area of the part inside the circle is π/4. If we choose a point in the square at random, the probability that it is inside the circle is π/4. If we choose N points in the square at random, and if C of them are inside the circle, we expect the fraction C/N of points that fall inside the circle to be about π/4. That is, we expect 4*C/N to be close to π. If N is large, we can expect 4*C/N to be a good estimate for π, and as N gets larger and larger, the estimate is likely to improve.
+We can pick a random number in the square by choosing numbers x and y in the range 0 to 1 (using Math.random()). Since the equation of the circle is x*x+y*y=1, the point lies inside the circle if x*x+y*y is less than 1. One trial consists of picking x and y and testing whether x*x+y*y is less than 1. To get an estimate for π, you have to do many trials, count the trials, and count the number of trials in which x*x+y*y is less than 1,
+
